@@ -1,4 +1,4 @@
-FROM alpine:3.15
+FROM alpine:3.18
 
 MAINTAINER Kamran Azeem & Henrik Høegh (kamranazeem@gmail.com, henrikrhoegh@gmail.com)
 
@@ -11,6 +11,7 @@ RUN     apk update \
                 iproute2 iputils jq mtr \
                 net-tools nginx openssl \
                 perl-net-telnet procps tcpdump tcptraceroute wget \
+                postgresql15-client mariadb-client \
     &&  mkdir /certs /docker \
     &&  chmod 700 /certs \
     &&  openssl req \
