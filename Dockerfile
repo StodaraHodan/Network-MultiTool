@@ -38,6 +38,8 @@ COPY entrypoint.sh /docker/entrypoint.sh
 # Start nginx in foreground:
 CMD ["/usr/sbin/nginx", "-g", "daemon off;"]
 
+# Disabling visual mode in vim
+CMD ["echo", "set mouse-=a >> /etc/vimrc"]
 
 
 # Note: If you have not included the "bash" package, then it is "mandatory" to add "/bin/sh"
