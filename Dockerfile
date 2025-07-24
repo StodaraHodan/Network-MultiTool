@@ -6,10 +6,16 @@ EXPOSE 80 443 1180 11443
 
 # Install some tools in the container and generate self-signed SSL certificates.
 # Packages are listed in alphabetical order, for ease of readability and ease of maintenance.
+
+# use proxy
+# RUN     https_proxy=http://proxy.example.com apk update \
+#    &&  https_proxy=http://proxy.example.com apk add \
+
 RUN     apk update \
-    &&  apk add bash bind-tools busybox-extras curl vim \
+    &&  apk add \
+                bash bind-tools busybox-extras curl vim \
                 iproute2 iputils jq mtr strace \
-                net-tools nginx openssl openssh nfs-utils samba \
+                net-tools nginx openssl openssh nfs-utils samba htop \
                 perl-net-telnet procps tcpdump tcptraceroute wget \
                 postgresql15-client mariadb-client \
     &&  mkdir /certs /docker \
