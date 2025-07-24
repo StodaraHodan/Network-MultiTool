@@ -8,7 +8,7 @@ EXPOSE 80 443 1180 11443
 # Packages are listed in alphabetical order, for ease of readability and ease of maintenance.
 RUN     apk update \
     &&  apk add bash bind-tools busybox-extras curl vim \
-                iproute2 iputils jq mtr \
+                iproute2 iputils jq mtr strace \
                 net-tools nginx openssl openssh nfs-utils samba \
                 perl-net-telnet procps tcpdump tcptraceroute wget \
                 postgresql15-client mariadb-client \
