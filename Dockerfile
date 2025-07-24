@@ -14,8 +14,8 @@ EXPOSE 80 443 1180 11443
 RUN     apk update \
     &&  apk add \
                 bash bind-tools busybox-extras curl vim \
-                iproute2 iputils jq mtr strace \
-                net-tools nginx openssl openssh nfs-utils samba htop \
+                iproute2 iputils jq mtr strace ncdu \
+                net-tools nginx openssl openssh nfs-utils samba htop bind-tools \
                 perl-net-telnet procps tcpdump tcptraceroute wget \
                 postgresql15-client mariadb-client \
     &&  mkdir /certs /docker \
